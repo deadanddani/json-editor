@@ -1,0 +1,19 @@
+{
+  "name": "json-editor",
+  "version": "1.0.0",
+  "description": "Editor JSON online sin anuncios",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "vanilla-jsoneditor": "^3.13.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  },
+  "private": true
+}

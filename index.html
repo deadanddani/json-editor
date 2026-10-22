@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Editor</title>
+    <meta name="description" content="Editor JSON online gratuito: ver, editar, formatear, reparar, comparar y transformar JSON. Sin anuncios." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="brand"><span class="brand-mark">{ }</span> JSON Editor</h1>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn" type="button" title="Cambiar tema">🌓 Tema</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel" data-side="left">
+        <div class="panel-toolbar">
+          <button class="btn" data-action="new" type="button">Nuevo</button>
+          <button class="btn" data-action="open" type="button">Abrir…</button>
+          <button class="btn" data-action="save" type="button">Guardar</button>
+          <button class="btn" data-action="copy" type="button">Copiar</button>
+          <input type="file" accept=".json,application/json,text/plain" hidden />
+        </div>
+        <div class="editor" id="editor-left"></div>
+      </section>
+
+      <nav class="middle" aria-label="Acciones entre paneles">
+        <button class="btn btn-icon" id="copy-to-right" type="button" title="Copiar izquierda → derecha">→</button>
+        <button class="btn btn-icon" id="copy-to-left" type="button" title="Copiar derecha → izquierda">←</button>
+        <button class="btn btn-icon" id="compare" type="button" title="Comparar ambos paneles" aria-pressed="false">≠</button>
+      </nav>
+
+      <section class="panel" data-side="right">
+        <div class="panel-toolbar">
+          <button class="btn" data-action="new" type="button">Nuevo</button>
+          <button class="btn" data-action="open" type="button">Abrir…</button>
+          <button class="btn" data-action="save" type="button">Guardar</button>
+          <button class="btn" data-action="copy" type="button">Copiar</button>
+          <input type="file" accept=".json,application/json,text/plain" hidden />
+        </div>
+        <div class="editor" id="editor-right"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
